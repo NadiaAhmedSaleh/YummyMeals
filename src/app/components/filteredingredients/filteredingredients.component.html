@@ -1,0 +1,27 @@
+
+<section class="my-4">
+    <h2 class="text-center text-main">Ingredient's Meals</h2>
+    
+  
+    
+   <div class="container">
+    <div class="row py-5 g-4" >
+        <div class="col-md-3" *ngFor="let meal of meals">
+        <div  class="meal cursor-pointer">
+        <img class="w-100" height="200px" [src]="meal.strMealThumb" alt="hello">
+        <div class="meal-layer position-absolute d-flex align-items-center text-black p-2">
+
+            <div>
+                <h4 class="text-black"> {{meal.strMeal}} </h4>
+                <button class="btn btn-main"  [routerLink]="['/details' , meal.idMeal]">Check the details</button>
+            </div>
+        </div>
+
+        </div>
+        </div>
+    </div>
+   </div> 
+   
+  
+
+</section>

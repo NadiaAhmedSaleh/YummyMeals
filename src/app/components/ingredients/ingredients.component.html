@@ -1,0 +1,24 @@
+<section class="my-4">
+    <h2 class="text-center text-main">Popular Igredients</h2>
+    
+  
+    
+   <div class="container">
+    <div class="row py-5 g-4" >
+        <div class="col-md-3" *ngFor="let meal of meals.slice(0,20)" [routerLink]="['/filteredingredients' ,meal.strIngredient]">
+        <div  class=" text-center p-2 cursor-pointer">
+
+        <i class="fa-solid fa-drumstick-bite fa-4x"></i>
+        <h3>{{meal.strIngredient}}</h3>
+        <p>{{meal.strDescription.split(' ').slice(0,20).join(' ')}}</p>
+        
+       
+
+        </div>
+        </div>
+    </div>
+   </div> 
+   
+  
+
+</section>

@@ -1,0 +1,25 @@
+
+<section class="my-4">
+    <h2 class="text-center text-main">Popular Categories</h2>
+    
+  
+    
+   <div class="container">
+    <div class="row py-5 g-4" >
+        <div class="col-md-3" [routerLink]="['/filteredcategories' ,meal.strCategory]" *ngFor="let meal of categories">
+        <div  class="meal cursor-pointer">
+        <img class="w-100" height="200px" [src]="meal.strCategoryThumb" alt="hello">
+        <div class="meal-layer position-absolute d-flex flex-column align-items-center text-black p-2">
+
+        <h3>{{meal.strCategory}}</h3>
+        <p>{{meal.strCategoryDescription}}</p>
+        </div>
+
+        </div>
+        </div>
+    </div>
+   </div> 
+   
+  
+
+</section>

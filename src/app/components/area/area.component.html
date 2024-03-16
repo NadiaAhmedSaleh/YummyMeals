@@ -1,0 +1,26 @@
+
+
+
+<section class="my-4">
+    <h2 class="text-center text-main">Popular Areas</h2>
+    
+  
+    
+   <div class="container">
+    <div class="row py-5 g-4" >
+        <div class="col-md-3"  *ngFor="let meal of meals" [routerLink]="['/filteredarea' ,meal.strArea]">
+        <div  class=" text-center p-2 cursor-pointer">
+
+        <i class="fa-solid fa-house-laptop fa-4x"></i>
+        <h3>{{meal.strArea}}</h3>
+        
+       
+
+        </div>
+        </div>
+    </div>
+   </div> 
+   
+  
+
+</section>

@@ -1,0 +1,36 @@
+
+
+<div class="input mx-auto">
+    <div >
+        <input  class="form-control bg-transparent  "  type="text" placeholder="Search By Name" [(ngModel)]="mealName" (keyup)="onSubmit()">
+
+    </div>
+    
+</div>
+
+
+<section class="my-4">
+
+    <div class="container ">
+
+        <div class="row py-5 g-4" >
+                <div class="col-md-3" *ngFor="let meal of meals">
+                        <div  class="meal cursor-pointer ">
+                            <img class="w-100" [src]="meal.strMealThumb" >
+                            <div class="meal-layer position-absolute d-flex align-items-center text-black p-2">
+                                <div>
+                                 <h3 class="text-main"> {{meal.strMeal}} </h3>
+                                 <button class="btn btn-main"  [routerLink]="['/details' , meal.idMeal]">Check the details</button>
+                                </div>
+                            
+                            </div>
+    
+                        </div>
+                </div>
+                
+               
+    
+            </div>
+                
+          
+

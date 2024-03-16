@@ -1,0 +1,82 @@
+
+
+
+<section class="image">
+
+    <div class="caption" >
+       
+            <h1 class="text-white" > A cooking <span class= "text-main"> <b>LOVER ?</b> </span> </h1>
+            <P  [@slideInLeft]="slideInLeft" >You're in the right place where you can find all the recipes of your favourite meals.</P>
+            <P  [@slideInRight]="slideInRight">Find meals with your favourite category, area or even ingredients.</P>
+
+    </div>
+</section>
+
+
+<section class="my-4">
+    <h2 class="text-center text-main my-4">Popular Meals</h2>
+ 
+    <div class="container ">
+
+        <div class="row py-5 g-4" >
+                <div class="col-md-3" *ngFor="let meal of meals.slice(0,24)">
+                        <div  class="meal cursor-pointer ">
+                            <img class="w-100" [src]="meal.strMealThumb" >
+                            <div class="meal-layer position-absolute d-flex align-items-center text-black p-2">
+                                <div>
+                                 <h3 class="text-main"> {{meal.strMeal}} </h3>
+                                 <button class="btn btn-main"  [routerLink]="['/details' , meal.idMeal]">Check the details</button>
+                                </div>
+                            
+                            </div>
+    
+                        </div>
+                </div>
+                
+               
+    
+            </div>
+                
+          
+    
+    
+      </div>
+  </section>
+
+  <section class="my-4">
+    <h1 class="text-main text-center my-4">Testmonials</h1>
+       
+ <div class="container-fluid" >
+    <owl-carousel-o [options]="mainSlider"  >
+        <ng-template carouselSlide>
+            <div class="card ">
+          <img src="./assets/images/what-is-an-executive-chef-phpUdU4z6.webp" height="250" class="w-100 rounded text-center mb-3" alt="">
+          <h4 class="text-main">Chef Joe Edward</h4>
+          <p>"It's a very helpful website"</p>
+        </div>
+        </ng-template>  
+
+        <ng-template carouselSlide><div class="card ">
+            <img src="./assets/images/istockphoto-1202489184-612x612.jpg" height="250" class="w-100 rounded text-center mb-3" alt="">
+            <h4 class="text-main">Liza kay</h4>
+            <p>"I will never stop using it"</p>
+          </div>
+          </ng-template> 
+        
+          <ng-template carouselSlide><div class="card ">
+            <img src="./assets/images/9-Best-Famous-Female-Chefs-We-Absolutely-Love.webp" height="250" class="w-100 rounded text-center mb-3" alt="">
+            <h4 class="text-main">Sarah Jhonson</h4>
+            <p>"It's great, I'm using it daily"</p>
+          </div>
+          </ng-template>
+          
+          <ng-template carouselSlide><div class="card ">
+            <img src="./assets/images/0x0.webp" height="250" class="w-100 rounded text-center mb-3" alt="">
+            <h4 class="text-main">Mary Lee</h4>
+            <p>"I have never seen such a collection of recipes in one place"</p>
+          </div>
+          </ng-template> 
+      </owl-carousel-o>
+</div>
+  </section>
+  
